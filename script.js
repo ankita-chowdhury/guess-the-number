@@ -2,8 +2,8 @@ let randomNumber = parseInt(Math.random()*100 + 1);
 
 const submit = document.querySelector('#subt');
 const userInput = document.querySelector('#guessField');
-const guessSolt = document.querySelector('.guesses');
-const remaining = document.querySelector('.lastResult');
+const guessSolt = document.querySelector('.prevGuesses');
+const remaining = document.querySelector('.remainingGuess');
 const lowOrHigh = document.querySelector('.lowOrHi');
 const startOver = document.querySelector('.resultParas');
 
@@ -27,7 +27,7 @@ function validateGuess(guess){
     if(isNaN(guess)){
         alert('Please enter a valid number')
     }
-    else if(guess<1){
+    else if(guess < 1){
         alert('Please enter a number more than 1')
     }
     else if(guess > 100){
